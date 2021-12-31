@@ -9,14 +9,12 @@ if (isset($_GET["username"]) && isset($_GET["password"])) {
     echo json_encode($response);
   }
   else {
-    $data = ["message" => "Username or password is wrong!"];
-    $response = array("status" => "ok", "accessTime" => time(), "message" => $data);
+    $response = array("status" => "ok", "accessTime" => time(), "message" => "Username or password is wrong!");
     echo json_encode($response);
   }
 }
 else {
-  $data = ["message" => "Username or password is wrong!"];
-  $response = array("status" => "ok", "accessTime" => time(), "message" => $data);
+  $response = array("status" => "ok", "accessTime" => time(), "message" => "Username or password is wrong!");
   echo json_encode($response);
 }
 ?>
